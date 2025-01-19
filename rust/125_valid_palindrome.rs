@@ -19,9 +19,24 @@ fn is_palindrom(s: String) -> bool {
 }
 
 fn main() {
-    let input_string = "A man, a plan, a canal: Panama";
-    // let input_stirng = "race a car";
-    // let input_stirng = " ";
+    let input_string = "A man, a plan, a canal: Panama".to_string();
+    // let input_stirng = "race a car".to_string();
+    // let input_stirng = " ".to_string();
 
-    println!("Palindrom: {}", is_palindrom(input_string.to_string()));
+    println!("Palindrom: {}", is_palindrom(input_string));
+}
+
+#[cfg(test)]
+mod test {
+    use super::*;
+
+    #[test]
+    fn basic() {
+        assert_eq!(
+            is_palindrom("A man, a plan, a canal: Panama".to_string()),
+            true
+        );
+        assert_eq!(is_palindrom("race a car".to_string()), false);
+        assert_eq!(is_palindrom(" ".to_string()), true);
+    }
 }
