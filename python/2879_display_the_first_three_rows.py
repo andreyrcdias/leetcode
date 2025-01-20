@@ -12,7 +12,5 @@ data = {
     'salary': [48675, 11096, 33805, 37678, 23793, 40454]
 }
 
-# Create the DataFrame
 df = pd.DataFrame(data)
-
 print(selectFirstRows(df))
