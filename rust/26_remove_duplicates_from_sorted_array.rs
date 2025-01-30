@@ -1,19 +1,18 @@
-
 fn remove_duplicates(nums: &mut Vec<i32>) -> i32 {
-        if nums.is_empty() {
-            return 0;
+    if nums.is_empty() {
+        return 0;
+    }
+
+    let mut unique_count = 1;
+
+    for i in 1..nums.len() {
+        if nums[i] != nums[unique_count - 1] {
+            nums[unique_count] = nums[i];
+            unique_count += 1;
         }
+    }
 
-        let mut unique_count = 1;
-
-        for i in 1..nums.len() {
-            if nums[i] != nums[unique_count - 1] {
-                nums[unique_count] = nums[i];
-                unique_count += 1;
-            }
-        }
-
-        unique_count as i32
+    unique_count as i32
 }
 
 #[cfg(test)]
