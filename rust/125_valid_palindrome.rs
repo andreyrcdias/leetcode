@@ -22,7 +22,6 @@ fn main() {
     let input_string = "A man, a plan, a canal: Panama".to_string();
     // let input_stirng = "race a car".to_string();
     // let input_stirng = " ".to_string();
-
     println!("Palindrom: {}", is_palindrom(input_string));
 }
 
@@ -31,7 +30,7 @@ mod test {
     use super::*;
 
     #[test]
-    fn basic() {
+    fn test_is_palindrom() {
         assert_eq!(
             is_palindrom("A man, a plan, a canal: Panama".to_string()),
             true

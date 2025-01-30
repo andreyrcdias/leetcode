@@ -25,3 +25,15 @@ fn main() {
     let min_number = single_number(nums);
     println!("{}", min_number)
 }
+
+#[cfg(test)]
+mod test {
+    use super::*;
+
+    #[test]
+    fn test_single_number() {
+        assert_eq!(single_number(vec![2, 2, 1]), 1);
+        assert_eq!(single_number(vec![4, 1, 2, 1, 2]), 4);
+        assert_eq!(single_number(vec![1]), 1);
+    }
+}

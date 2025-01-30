@@ -24,7 +24,6 @@ fn main() {
     // let input_string = "()".to_string();
     // let input_string = "()[]{}".to_string();
     let input_string = "(]".to_string();
-
     println!("Valid Parentheses: {}", is_valid(input_string));
 }
 
@@ -33,7 +32,7 @@ mod test {
     use super::*;
 
     #[test]
-    fn basic() {
+    fn test_is_valid() {
         assert_eq!(is_valid("()".to_string()), true);
         assert_eq!(is_valid("()[]{}".to_string()), true);
         assert_eq!(is_valid("(]".to_string()), false);

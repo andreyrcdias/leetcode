@@ -22,3 +22,26 @@ fn main() {
         .collect::<Vec<String>>();
     println!("{:?}", longest_common_prefix(strs));
 }
+
+#[cfg(test)]
+mod test {
+    use super::*;
+
+    #[test]
+    fn test_longest_common_prefix_case_1() {
+        let strs = vec!["flower", "flow", "flight"]
+            .into_iter()
+            .map(|s| s.to_string())
+            .collect::<Vec<String>>();
+        assert_eq!(longest_common_prefix(strs), "fl");
+    }
+
+    #[test]
+    fn test_longest_common_prefix_case_2() {
+        let strs = vec!["dog", "racecar", "car"]
+            .into_iter()
+            .map(|s| s.to_string())
+            .collect::<Vec<String>>();
+        assert_eq!(longest_common_prefix(strs), "");
+    }
+}

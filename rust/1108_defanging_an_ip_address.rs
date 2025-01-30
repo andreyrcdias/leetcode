@@ -15,7 +15,7 @@ mod test {
     use super::*;
 
     #[test]
-    fn main() {
+    fn test_defang_i_paddr() {
         assert_eq!(
             defang_i_paddr(String::from("1.1.1.1")),
             String::from("1[.]1[.]1[.]1")
