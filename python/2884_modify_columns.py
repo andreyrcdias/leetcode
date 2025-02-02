@@ -7,8 +7,8 @@ def modifySalaryColumn(employees: pd.DataFrame) -> pd.DataFrame:
 
 
 data = {
-    'name': ['Jack', 'Piper', 'Mia', 'Ulysses'],
-    'salary': [19666, 74754, 62509, 54866],
+    "name": ["Jack", "Piper", "Mia", "Ulysses"],
+    "salary": [19666, 74754, 62509, 54866],
 }
 employess = pd.DataFrame(data)
 modifySalaryColumn(employess)
