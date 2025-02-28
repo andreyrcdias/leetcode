@@ -5,3 +5,6 @@ install:
 fmt:
 	ruff check --select I --fix
 	ruff format
+
+tests:
+	pytest . -vvs
