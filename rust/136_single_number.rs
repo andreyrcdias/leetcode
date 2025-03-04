@@ -18,14 +18,6 @@ fn single_number(nums: Vec<i32>) -> i32 {
     min_num
 }
 
-fn main() {
-    // let nums = vec![2, 2, 1];
-    // let nums = vec![4, 1, 2, 1, 2];
-    let nums = vec![1];
-    let min_number = single_number(nums);
-    println!("{}", min_number)
-}
-
 #[cfg(test)]
 mod test {
     use super::*;

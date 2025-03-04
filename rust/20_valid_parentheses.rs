@@ -20,13 +20,6 @@ fn is_valid(s: String) -> bool {
     stack.is_empty()
 }
 
-fn main() {
-    // let input_string = "()".to_string();
-    // let input_string = "()[]{}".to_string();
-    let input_string = "(]".to_string();
-    println!("Valid Parentheses: {}", is_valid(input_string));
-}
-
 #[cfg(test)]
 mod test {
     use super::*;

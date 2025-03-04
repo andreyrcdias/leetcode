@@ -14,15 +14,6 @@ fn longest_common_prefix(strs: Vec<String>) -> String {
     prefix
 }
 
-fn main() {
-    // let strs = vec!["dog", "racecar", "car"]
-    let strs = vec!["flower", "flow", "flight"]
-        .into_iter()
-        .map(|s| s.to_string())
-        .collect::<Vec<String>>();
-    println!("{:?}", longest_common_prefix(strs));
-}
-
 #[cfg(test)]
 mod test {
     use super::*;
