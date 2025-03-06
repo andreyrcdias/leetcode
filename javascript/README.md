@@ -4,7 +4,7 @@
 - [Node.js](https://nodejs.org/)
 - [npm](https://www.npmjs.com/)
 
-**Install the dependencies***:
+**Install the dependencies**:
 ```bash
 npm install
 ```
