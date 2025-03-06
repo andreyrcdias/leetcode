@@ -1,5 +1,13 @@
+# Python
 .venv
-.DS_Store
 __pycache__
 .pytest_cache
 .ruff_cache
+
+# JavaScript
+package-lock.json
+node_modules
+
+# OS generated files
+.DS_Store
+
