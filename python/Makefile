@@ -7,4 +7,5 @@ fmt:
 	ruff format
 
 tests:
-	pytest . -vvs
+	pytest -vvs
+
