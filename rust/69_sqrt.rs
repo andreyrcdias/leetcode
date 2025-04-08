@@ -1,4 +1,5 @@
 fn my_sqrt(x: i32) -> i32 {
+    // impl of newton sqrt
     let n = x as f64;
     let mut guess = n / 10.0;
     let threshold = 10e-5;
