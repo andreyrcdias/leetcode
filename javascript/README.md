@@ -20,6 +20,7 @@ make tests
 ```
 
 ## Running formatter
+
 ```bash
 npx prettier . --write
 # or
