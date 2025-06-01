@@ -14,7 +14,7 @@ mod test {
     use super::*;
 
     #[test]
-    fn test_range_sum_query() {
+    fn test_is_power_of_four() {
         assert_eq!(is_power_of_four(16), true);
         assert_eq!(is_power_of_four(5), false);
         assert_eq!(is_power_of_four(1), true);
