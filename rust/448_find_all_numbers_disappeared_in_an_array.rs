@@ -1,11 +1,12 @@
 fn find_disappeared_numbers(nums: Vec<i32>) -> Vec<i32> {
     let n = nums.len() as i32;
-    let m = nums.iter().cloned().min().unwrap_or(1);
-    let nums_range: Vec<i32> = (m..=n).map(|x| x as i32).collect();
-    let disappeared_numbers: Vec<i32> = nums_range
-        .into_iter()
-        .filter(|&x| !nums.contains(&x))
-        .collect();
+    let mut seen = vec![false; n as usize + 1];
+    for num in nums {
+        if num > 0 && num <= n {
+            seen[num as usize] = true;
+        }
+    }
+    let disappeared_numbers: Vec<i32> = (1..=n).filter(|&x| !seen[x as usize]).collect();
     disappeared_numbers
 }
 
@@ -20,5 +21,6 @@ mod test {
             vec![5, 6]
         );
         assert_eq!(find_disappeared_numbers(vec![1, 1]), vec![2]);
+        assert_eq!(find_disappeared_numbers(vec![2, 2]), vec![1]);
     }
 }
