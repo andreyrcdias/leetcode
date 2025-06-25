@@ -7,10 +7,7 @@
 -- | games_played | int     |
 -- +--------------+---------+
 
-SELECT
-	player_id,
-	event_date AS first_login
-FROM activity
-GROUP BY player_id
-ORDER BY event_date
+SELECT player_id, MIN(event_date) AS first_login
+FROM Activity
+GROUP by 1;
 
