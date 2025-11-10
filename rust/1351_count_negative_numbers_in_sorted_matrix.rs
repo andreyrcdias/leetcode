@@ -3,7 +3,6 @@ fn count_negatives(grid: Vec<Vec<i32>>) -> i32 {
     for row in grid {
         for num in row {
             if num < 0 {
-                println!("{}", num);
                 negatives += 1;
             }
         }
