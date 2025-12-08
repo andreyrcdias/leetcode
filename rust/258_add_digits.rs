@@ -1,13 +1,9 @@
 fn add_digits(num: i32) -> i32 {
-    let mut n = num;
-    while n >= 10 {
-        n = n
-            .to_string()
-            .chars()
-            .map(|d| d.to_digit(10).unwrap() as i32)
-            .sum();
+    if num == 0 {
+        0
+    } else {
+        (num - 1).rem_euclid(9) + 1
     }
-    n
 }
 
 #[cfg(test)]
